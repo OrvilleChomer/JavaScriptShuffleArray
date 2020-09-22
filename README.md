@@ -2,4 +2,4 @@
 
 Basic Syntax:
 
-`const newShuffledArr = `
+`const newShuffledArr = shuffleIndexedArray(originalArr);`
