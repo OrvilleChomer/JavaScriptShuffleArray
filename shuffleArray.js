@@ -3,7 +3,7 @@
    Return a Randomly Shuffled version of a JavaScript 
    indexed array    that was inputted...
 
-   2nd param is good for stuff like randomized messages.
+   The optional 2nd param is good for stuff like randomized messages.
    To make it impossible for the first item in the shuffled
    array to be the Same as the last item in the previously
    shuffled array!
