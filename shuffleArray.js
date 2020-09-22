@@ -8,17 +8,19 @@
    array to be the Same as the last item in the previously
    shuffled array!
  **************************************************************/
- function shuffleIndexedArray(inpArr,nStartPadding) {
+ function shuffleIndexedArray(inpArr,niStartPadding) {
     let wrkArr = [];
     let outArr = [];
     let nMax = inpArr.length;
-    let nStart = 0;
+    let nStartPadding = 0;
     
-    if (typeof nStartPadding === "number") {
-        nStart = nStartPadding;
+    if (typeof niStartPadding === "number") {
+        nStartPadding = niStartPadding;
     } // end if
 
-    for (let n=nStart;n<nMax;n++) {
+    // we don't modify the original input array...
+
+    for (let n=0;n<nMax-nStartPadding;n++) {
         wrkArr.push(inpArr[n]);
     } // next n
 
@@ -28,9 +30,9 @@
         wrkArr.splice(idx,1); // remove from wrkArr[] !
     } while(wrkArr.length > 0)
 
-    if (nStart > 0) {
+    if (nStartPadding > 0) {
         let paddingArr = [];
-        for (let n=0;n<nStart-1;n++) {
+        for (let n=nMax-nStartPadding;n<nMax;n++) {
             paddingArr.push(inpArr[n])
         } // next n
 
